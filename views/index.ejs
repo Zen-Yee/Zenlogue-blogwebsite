@@ -3,24 +3,20 @@
 <div id="mainContainer">
 
     <div id="articleContainer">
-
         <section class="blog-post">
-            <h2>First Blog Post</h2>
-            <p class="date">June 14, 2025</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Read more...</a></p>
-        </section>
-
-        <section class="blog-post">
-            <h2>Another Blog Article</h2>
-            <p class="date">June 10, 2025</p>
-            <p>This is a short summary of another interesting blog post. <a href="#">Read more...</a></p>
+            <% for (let i = 0; i < post.length; i++ ) { %>
+                 <% let item = post[i]; %>
+                <h2><%= item.title %></h2>
+                <p class="date"><%= item.date %></p>
+                <p class="author"><%= item.author %></p>
+                <p class="content">\<%= item.content %><a href="#">Read more...</a></p>
+            <% } %>
         </section>
 
         <p>Older Posts &rarr;</p>
     </div>
 
     <div id="sidebar">
-        <!-- <img> -->
          <h3>About Me</h3>
          <p>Summary About Me.....</p>
          <p>Read More &rarr;</p>

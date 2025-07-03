@@ -1,19 +1,27 @@
 import express from "express";
-import bodyParser from "body-parser";
+import fs from "fs";
 
 const app = express();
 const port = 3000;
 const year = new Date().getFullYear();
 
-app.use(express.static('public'))
-
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    const data={
-        year:year
+  fs.readFile("./posts.json", "utf8", (err, jsonData) => {
+    if (err) {
+      console.error("Error reading JSON:", err);
+      return res.status(500).send("Error reading data");
     }
-    res.render("index.ejs",data);
+    const posts = JSON.parse(jsonData);
+    const data = {
+      year: year,
+      post: posts,
+    };
+    res.render("index.ejs", data);
+  });
 });
 
 app.listen(port, () => {

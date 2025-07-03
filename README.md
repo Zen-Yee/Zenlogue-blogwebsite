@@ -16,12 +16,17 @@ A modern and responsive blogging website created as a Capstone Project from "The
 
 ### [Week 1] – 15-21/06/2025
 - Created basic project folder structure with `/views` (stores dynamic templete) and `/public` (Stores resource used across website).
-- Created basic layout for the blog website, include navigation bar, blog post container, side bar and footer. Also added an About Me page.
-- Pending to create post.json to stores post data and update index.js to pull data dynamically.
+- Created basic layout for the blog website, include navigation bar, blog post container, side bar and footer. 
+- Added aboutMe.ejs in folder `/views`.
+
+### [Week 2] – 22-28/06/2025
+- Added posts.json file to stores post data. JSON file is use as storage because no database as no databse is hosted for this project.
+- Updated index.js file to pull data dynamically.
+
+### [Week 3] – 29-5/07/2025
 
 
 ## Author
-
 **Zen Yee**  
 GitHub: [@Zen Yee](https://github.com/Zen-Yee)  
-Beginner web developer exploring full-stack technologies.
+Software developer striking to explore more full-stack technologies.
