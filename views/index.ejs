@@ -1,27 +1,36 @@
 <%- include('partials/header.ejs') %>
 
 <div id="mainContainer">
+  <div id="articleContainer">
+    <section class="blog-post">
+      <% posts.forEach(item => { %>
+      <h2><%= item.title %></h2>
+      <p class="date"><%= item.date %></p>
+      <p class="author"><%= item.author %></p>
+      <p class="content"><%= item.content %> <a href="#">Read more...</a></p>
+      <% }) %>
+    </section>
 
-    <div id="articleContainer">
-        <section class="blog-post">
-            <% for (let i = 0; i < post.length; i++ ) { %>
-                 <% let item = post[i]; %>
-                <h2><%= item.title %></h2>
-                <p class="date"><%= item.date %></p>
-                <p class="author"><%= item.author %></p>
-                <p class="content">\<%= item.content %><a href="#">Read more...</a></p>
-            <% } %>
-        </section>
+    <p>Older Posts &rarr;</p>
 
-        <p>Older Posts &rarr;</p>
-    </div>
+    <% if(loginStatus === "1") {%>
 
-    <div id="sidebar">
-         <h3>About Me</h3>
-         <p>Summary About Me.....</p>
-         <p>Read More &rarr;</p>
-    </div>
+      <section class="blog-update">
+        <form action="/posts/new" method="POST">
+          <input type="text" name="title" placeholder="Title" required />
+          <textarea name="content" placeholder="Write your post here…" rows="5" required></textarea>
+          <button type="submit">Submit Post</button>
+        </form>
+      </section>
 
+    <% } %>
+  </div>
+
+  <div id="sidebar">
+    <h3>About Me</h3>
+    <p>Summary About Me.....</p>
+    <p>Read More &rarr;</p>
+  </div>
 </div>
 
 <%- include('partials/footer.ejs') %>

@@ -13,8 +13,14 @@
   <main>
 
     <div id="Navigation" class="pink">
-      <h1>Zenlogue</h1>
+      <h1><a href="/">Zenlogue</a></h1>
       <a class="navButton active">Home</a>
       <a class="navButton">About</a>
       <a class="navButton">Contact</a>
+      <% if(loginStatus === "1") {%>
+        <a class="navButton" href="/">Log Out</a>
+      <% }else{ %>
+        <a class="navButton" href="/login">Log In</a>
+      <% } %>
+      
     </div>
