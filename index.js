@@ -84,23 +84,13 @@ app.get('/logout', (req, res) => {
   res.redirect('/');  
 });
 
-app.get("/aboutMe", (req, res) => {
+app.get("/about", (req, res) => {
 
     const data = {
       year: year,
       loginStatus: loginY,
     };
-    res.render("aboutMe.ejs", data);
-
-});
-
-app.get("/contact", (req, res) => {
-
-    const data = {
-      year: year,
-      loginStatus: loginY,
-    };
-    res.render("contacts.ejs", data);
+    res.render("about.ejs", data);
 
 });
 

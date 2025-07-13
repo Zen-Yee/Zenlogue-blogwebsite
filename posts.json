@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Zenlogue - Combine 'Zen' and 'Monologue'",
+    "title": "Welcome to Zenlogue!",
     "author": "Zen Yee",
     "date": "2025-06-10",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "title": "Learning Express.js and EJS",
+    "title": "You can try to add post by logging in! It's at the top right corner!",
     "author": "Zen Yee",
     "date": "2025-06-12",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "title": "How I Used JSON to Store Blog Posts",
+    "title": "UserName is Zen and Password is Zenlogue@123!",
     "author": "Zen Yee",
     "date": "2025-06-13",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",

@@ -75,6 +75,27 @@
   align-items: center;
 }
 
+.AboutMe-Contact{
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.AboutMe-Contact>a>img{
+    width: 4em;
+}
+
+.aboutMe-Text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMe *{
+    padding: 5%;
+}
+
 footer {
   height: 200px;
   width: 100%;
