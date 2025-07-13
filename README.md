@@ -15,20 +15,51 @@ A modern and responsive blogging website created as a Capstone Project from "The
 ## My Journey 🚀
 
 ### [Week 1] – 15-21/06/2025
-- Created basic project folder structure with `/views` (stores dynamic templete) and `/public` (Stores resource used across website).
-- Created basic layout for the blog website, include navigation bar, blog post container, side bar and footer. 
-- Added aboutMe.ejs in folder `/views`.
+- Created basic project folder structure:
+  - `/views` – for EJS templates. 
+  - `/public` – for static resources (CSS, images, JS).
+- Designed basic blog layout including:
+  - Header with navigation bar.
+  - Blog post container
+  - Side bar  
+  - Footer 
+- Added aboutMe.ejs to the `/views` folder.
 
 ### [Week 2] – 22-28/06/2025
-- Added posts.json file to stores post data. JSON file is use as storage because no database as no databse is hosted for this project.
-- Updated index.js file to pull data from posts.json.
+- Introduced posts.json to store blog post data.
+    - JSON is used instead of a database as no backend database is hosted yet
+- Updated index.js to fetch data from posts.json and render on the homepage.
 
 ### [Week 3] – 29-05/07/2025
-- Created login.ejs for user login.
-- Created user.ejs & headerUser.ejs which is exactly same as index.ejs & header.ejs, except an additional section with text field to let user add new post, and navigation bar with "logout" instead of "login".
-- Updated index.js file: added endpoint "/login" that direct user to the login page once they clicked on "login" in the navigation bar.
-- Updated index.js file: added endpoint "/User" to handle credentials submitted in "login.ejs". If the credentials is correct, send "user.ejs" to the user. Alert and redirect back to "/login" otherwise.
-- Observed similar patterns: user.ejs & index.ejs, headerUser.ejs & header.ejs, searching for solutions to combine these and avoid repetitive functions.
+- Created login.ejs for user login interface.
+- Created user.ejs and headerUser.ejs:
+    - These mirror index.ejs and header.ejs, but include:
+        - A text field for creating new posts.
+        - A modified navigation bar with a "Logout" button instead of "Login".
+- Updated index.js:
+    - Added "/login" endpoint to serve the login page when "Login" is clicked in the navbar.
+    - Added "/User" endpoint to handle submitted credentials:
+        - If correct, the user is directed to user.ejs.
+        - If incorrect, the user is alerted and redirected back to "/login".
+- Noted redundancy between:
+    - user.ejs & index.ejs
+    - headerUser.ejs & header.ejs
+- Exploring ways to reuse components and reduce code duplication.
+
+### [Week 4] – 06-12/07/2025
+- Updated index.js:
+    - Added loginY variable where "1" represent log in, and "0" represent log out.
+    - Updated the data passed to res.render() by including loginStatus: loginY, enabling templates to reflect user authentication status.
+    - Updated "/User" endpoint, instead of render user.ejs, it updated loginY = 1" and redirect back to "/" endpoint.
+    - Added "/posts/new" endpoint to handle new post added by user.
+    - Added "/logout" endpoint to change loginY = "0".
+- Updated index.ejs:
+    - Added section "blog-update" that contains a form let user update new post.
+    - Added conditional statement for loginStatus, if loginStatus === "1":
+        - Navigation bar will show log out.
+        - Section "blog-update" will shown.
+- Removed user.ejs and headerUser.ejs.
+- Update main.css
 
 
 ## Author

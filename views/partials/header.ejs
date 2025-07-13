@@ -11,16 +11,17 @@
 
 <body>
   <main>
-
-    <div id="Navigation" class="pink">
+    <div id="headerBar" class="pink">
       <h1><a href="/">Zenlogue</a></h1>
-      <a class="navButton active">Home</a>
-      <a class="navButton">About</a>
-      <a class="navButton">Contact</a>
-      <% if(loginStatus === "1") {%>
-        <a class="navButton" href="/">Log Out</a>
-      <% }else{ %>
-        <a class="navButton" href="/login">Log In</a>
-      <% } %>
+      <div id="Navigation" >
+        <a class="navButton active" href="/">Home</a>
+        <a class="navButton" href="/aboutMe">About</a>
+        <a class="navButton" href="/contact">Contact</a>
+        <% if(loginStatus === "1") {%>
+          <a class="navButton" href="/logout">Log Out</a>
+        <% }else{ %>
+          <a class="navButton" href="/login">Log In</a>
+        <% } %>
+      </div>
       
     </div>

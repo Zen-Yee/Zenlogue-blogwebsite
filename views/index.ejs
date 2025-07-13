@@ -4,10 +4,12 @@
   <div id="articleContainer">
     <section class="blog-post">
       <% posts.forEach(item => { %>
-      <h2><%= item.title %></h2>
-      <p class="date"><%= item.date %></p>
-      <p class="author"><%= item.author %></p>
-      <p class="content"><%= item.content %> <a href="#">Read more...</a></p>
+        <div class="postContainer">
+          <h2><%= item.title %></h2>
+          <p class="date"><%= item.date %></p>
+          <p class="author"><%= item.author %></p>
+          <p class="content"><%= item.content %> <a href="#">Read more...</a></p>
+        </div>
       <% }) %>
     </section>
 
@@ -29,7 +31,7 @@
   <div id="sidebar">
     <h3>About Me</h3>
     <p>Summary About Me.....</p>
-    <p>Read More &rarr;</p>
+    <a href="/aboutMe">Read More &rarr;</a>
   </div>
 </div>
 

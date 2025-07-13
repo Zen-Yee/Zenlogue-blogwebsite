@@ -79,8 +79,32 @@ app.post('/posts/new', (req, res) => {
 
 });
 
+app.get('/logout', (req, res) => {
+  loginY = "0"; 
+  res.redirect('/');  
+});
 
+app.get("/aboutMe", (req, res) => {
+
+    const data = {
+      year: year,
+      loginStatus: loginY,
+    };
+    res.render("aboutMe.ejs", data);
+
+});
+
+app.get("/contact", (req, res) => {
+
+    const data = {
+      year: year,
+      loginStatus: loginY,
+    };
+    res.render("contacts.ejs", data);
+
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
